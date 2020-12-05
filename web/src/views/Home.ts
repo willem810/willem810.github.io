@@ -22,7 +22,6 @@ export default class Home extends Vue {
 
     click(){        
         this.raadsels[this.currentRaadselIndex]++
-        this.allRaadselsCorrect()
     }
 
     raadselCorrect(raadselId: number, answer: string){
@@ -38,10 +37,16 @@ export default class Home extends Vue {
     }
 
 
-     allRaadselsCorrect(){
-        this.victoryAudio.play()
+    async allRaadselsCorrect(){
+        await this.playVictoryAudio()
+    }
 
-        new Promise((res) => setTimeout(res, 4000)).then(() => {
+    async playVictoryAudio(){
+        this.victoryAudio.volume = 0.3
+        this.victoryAudio.play()
+        this.cadeauAudio.volume = 1
+
+        await new Promise((res) => setTimeout(res, 7000)).then(() => {
             this.cadeauAudio.play()
         })
     }

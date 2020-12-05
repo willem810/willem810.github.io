@@ -23,7 +23,7 @@ export default class Raadsel1 extends Raadsel {
 
 
     guessCorrect(answer: string): void {
-        // this.sendMail()
+        this.sendMail()
     }
     guessWrong(answer: string): void {
         this.wrong = true

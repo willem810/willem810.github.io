@@ -2,15 +2,34 @@
   <div class="home">
     <div class="container">
       <!-- <Carousel /> -->
-      
-      <Raadsel1 :trigger="raadsels[1]" @guessCorrect="raadselCorrect" @guessWrong="raadselWrong"/>
-      <Raadsel2 :trigger="raadsels[2]" @guessCorrect="raadselCorrect"  @guessWrong="raadselWrong" v-show="currentRaadselIndex >= 2"/>
 
+      <Raadsel1
+        :trigger="raadsels[1]"
+        @guessCorrect="raadselCorrect"
+        @guessWrong="raadselWrong"
+      />
+      <Raadsel2
+        :trigger="raadsels[2]"
+        @guessCorrect="raadselCorrect"
+        @guessWrong="raadselWrong"
+        v-show="currentRaadselIndex >= 2"
+      />
+      <div class="text-center">
+        <v-btn
+          fab
+          small
+          dark
+          @click="playVictoryAudio"
+          v-show="currentRaadselIndex >= 0"
+        >
+          <v-icon>mdi-replay</v-icon>
+        </v-btn>
+        <p> replay audio </p>
+      </div>
 
+      <br/>
 
-      <v-btn block @click="click()">
-        check
-      </v-btn>
+      <v-btn block @click="click()"> check </v-btn>
     </div>
 
     <!-- <div class="background">World!</div> -->
@@ -21,7 +40,7 @@
 </script>
 
 <style lang="scss">
-$container-width: 40%;
+$container-width: 80%;
 
 .home {
   //  background: red;
