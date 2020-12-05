@@ -15,7 +15,7 @@ export default class Raadsel1 extends Raadsel {
     raadsel: string = "Hoeveel is 2+2?"
 
     mailRaadsel = "Waar je stinkt en je jezelf ziet staan, daartussenin kun je in de 2e lade verder gaan"
-    mailTo = "jesperblejie@hotmail.com"
+    mailTo = "willemtoemen@live.nl"
 
     check(answer: string): boolean {
         return answer === this.antwoord
