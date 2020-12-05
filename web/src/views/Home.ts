@@ -42,11 +42,11 @@ export default class Home extends Vue {
     }
 
     async playVictoryAudio(){
-        this.victoryAudio.volume = 0.3
+        this.victoryAudio.volume = 0.5
         this.victoryAudio.play()
         this.cadeauAudio.volume = 1
 
-        await new Promise((res) => setTimeout(res, 7000)).then(() => {
+        await new Promise((res) => setTimeout(res, 7300)).then(() => {
             this.cadeauAudio.play()
         })
     }
