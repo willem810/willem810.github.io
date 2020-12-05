@@ -2,7 +2,7 @@
   <div class="home">
     <div class="container text-center">
       <!-- <Carousel /> -->
-
+  Speciaal voor jesper <3
       <Raadsel1
         :trigger="raadsels[1]"
         @guessCorrect="raadselCorrect"
