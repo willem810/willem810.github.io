@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <Header />
+    <!-- <Header /> -->
 
     <!-- <v-main>
       <Home />
     </v-main> -->
 
-    <v-main class="ma-0 pa-0">
+    <v-main class="">
       <Home />
     </v-main>
   </v-app>

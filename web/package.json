@@ -11,7 +11,15 @@
     "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
+    "@types/node": "^14.14.10",
+    "@types/nodemailer": "^6.4.0",
+    "@types/nodemailer-direct-transport": "^1.0.31",
+    "@types/nodemailer-smtp-transport": "^2.7.4",
     "core-js": "^3.6.5",
+    "dns": "^0.2.2",
+    "emailjs-com": "^2.6.4",
+    "net": "^1.0.2",
+    "nodemailer": "^6.4.16",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
